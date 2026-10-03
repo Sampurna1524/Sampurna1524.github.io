@@ -4,6 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Sampurna Roy &middot; AI Engineer &amp; Researcher</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22glowGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2300f5ff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%237c3aed%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%2300f5ff%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22neonShadow%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%220%22%20stdDeviation%3D%222.5%22%20flood-color%3D%22%2300f5ff%22%20flood-opacity%3D%220.9%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22%23030712%22/%3E%0A%20%20%3Crect%20x%3D%222.5%22%20y%3D%222.5%22%20width%3D%2259%22%20height%3D%2259%22%20rx%3D%2213.5%22%20fill%3D%22none%22%20stroke%3D%22url%28%23glowGrad%29%22%20stroke-width%3D%222.5%22/%3E%0A%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2254%25%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%20font-family%3D%22%27Orbitron%27%2C%20%27Space%20Grotesk%27%2C%20%27Arial%20Black%27%2C%20sans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2225%22%20fill%3D%22%2300f5ff%22%20filter%3D%22url%28%23neonShadow%29%22%20letter-spacing%3D%221%22%3ESR%3C/text%3E%0A%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
 <style>
@@ -271,28 +273,39 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:linear-gradient(var(--cyan),var(--violet));border-radius:2px;}
 
-/* RESPONSIVE */
-@media(max-width:1100px){
-  .hero-avatar-wrap{display:none;}
-  section,#achievements{padding:5rem 4rem;}
-  nav{padding:1rem 2rem;}
-  nav.scrolled{padding:0.8rem 2rem;}
-  #hero{padding:6rem 4rem 4rem;}
-  footer{padding:2.5rem 4rem;}
+/* RESPONSIVE & MOBILE OVERHAUL */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  padding: 9px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
 }
-@media(max-width:768px){
-  section,#achievements{padding:4rem 1.5rem;}
-  nav{padding:1rem 1.5rem;}
-  .nav-links{gap:1.2rem;}
-  .nav-links li:not(:last-child){display:none;}
-  #hero{padding:5rem 1.5rem 3rem;}
-  .about-grid,.contact-wrapper{grid-template-columns:1fr;gap:3rem;}
-  footer{flex-direction:column;text-align:center;padding:2rem 1.5rem;}
-  .research-card{grid-template-columns:1fr;gap:0.5rem;}
-  .research-num{font-size:1.5rem;text-align:left;}
+.nav-toggle .bar {
+  width: 100%;
+  height: 2px;
+  background: var(--cyan);
+  border-radius: 2px;
+  transition: all 0.3s;
 }
+.nav-toggle.active {
+  border-color: var(--cyan);
+  box-shadow: 0 0 15px rgba(0,245,255,0.3);
+}
+.nav-toggle.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.active .bar:nth-child(2) { opacity: 0; }
+.nav-toggle.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* CERTIFICATIONS EXPANDED */
+.hero-mobile-stats { display: none; }
+
+/* CERTIFICATIONS */
 .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.2rem; margin-top: 2rem; }
 .cert-card-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.4rem 1.6rem; backdrop-filter: blur(10px); transition: all 0.3s; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
 .cert-card-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--cyan), var(--violet)); transform: scaleY(0); transform-origin: top; transition: transform 0.3s; }
@@ -315,10 +328,154 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 .cert-date { font-family: var(--font-mono); font-size: 0.65rem; color: var(--muted); }
 .ibm-courses-toggle { background: rgba(0,245,255,0.02); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 2rem; margin-top: 2rem; }
 .ibm-courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.8rem; margin-top: 1.2rem; }
-.ibm-course-item { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 0.7rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; text-decoration: none; transition: all 0.2s; cursor: none; }
+.ibm-course-item { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 0.7rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; text-decoration: none; transition: all 0.2s; }
 .ibm-course-item:hover { border-color: rgba(0,245,255,0.3); background: rgba(0,245,255,0.04); transform: translateX(3px); }
 .ibm-course-name { font-size: 0.78rem; color: var(--white); }
 .ibm-course-link { font-family: var(--font-mono); font-size: 0.65rem; color: var(--cyan); flex-shrink: 0; }
+
+/* MEDIA QUERIES */
+@media (max-width: 1100px) {
+  .hero-avatar-wrap { display: none; }
+  .hero-mobile-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 2.5rem;
+  }
+  .hero-stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 0.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  section, #achievements { padding: 5rem 3rem; }
+  nav { padding: 1rem 3rem; }
+  nav.scrolled { padding: 0.8rem 3rem; }
+  #hero { padding: 6.5rem 3rem 4rem; }
+  footer { padding: 2.5rem 3rem; }
+}
+
+@media (max-width: 860px) {
+  /* Hide custom cursor on touch/mobile for smooth native feel */
+  #cursor, #cursor-ring { display: none !important; }
+  body, a, button, .btn-primary, .btn-secondary, .project-card, .ach-card, .research-card, .contact-link, .gh-repo-card, .cert-card-item, .ibm-course-item, input, textarea {
+    cursor: auto !important;
+  }
+
+  /* Mobile Nav */
+  nav { padding: 0.9rem 1.4rem; }
+  nav.scrolled { padding: 0.8rem 1.4rem; }
+  .nav-toggle { display: flex; }
+  
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(3, 7, 18, 0.97);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.2rem;
+    align-items: stretch;
+    text-align: center;
+    transform: translateY(-120%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+    z-index: 999;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+    display: block;
+    width: 100%;
+    color: var(--white);
+  }
+  .nav-cta {
+    display: inline-block !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.82rem !important;
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero on mobile */
+  #hero { padding: 5.5rem 1.2rem 3rem; min-height: auto; }
+  .hero-name { font-size: clamp(2.6rem, 11vw, 4.2rem); margin-bottom: 0.8rem; }
+  .hero-role { font-size: 1rem; margin-bottom: 1.4rem; }
+  .hero-desc { font-size: 0.9rem; line-height: 1.7; margin-bottom: 2rem; }
+  .hero-buttons { width: 100%; flex-direction: column; gap: 0.8rem; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; padding: 0.85rem 1.5rem; }
+  
+  .hero-mobile-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+    margin-top: 2rem;
+  }
+  .scroll-hint { display: none; }
+
+  /* Sections */
+  section, #achievements { padding: 4rem 1.2rem; }
+  .section-title { font-size: clamp(1.8rem, 7vw, 2.4rem); margin-bottom: 2.5rem; }
+  
+  /* About */
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-right { width: 100%; }
+  .edu-cards { width: 100%; }
+
+  /* Timeline */
+  .timeline { padding-left: 1rem; }
+  .timeline-item { padding-left: 1.2rem; margin-bottom: 2rem; }
+  .timeline-item::before { left: -4px; top: 6px; }
+  .exp-body { padding: 1.2rem 1rem; }
+  .exp-header { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  .exp-date { align-self: flex-start; }
+  .exp-bullets li { font-size: 0.84rem; padding-left: 1.1rem; line-height: 1.55; }
+
+  /* Grids */
+  .projects-grid, .gh-repos-grid, .certs-grid, .skills-universe, .ach-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .project-card, .gh-repo-card, .cert-card-item, .skill-node, .ach-card {
+    padding: 1.4rem 1.2rem;
+  }
+  .ibm-courses-toggle { padding: 1.2rem 1rem; }
+  .ibm-courses-grid { grid-template-columns: 1fr; }
+
+  /* Research */
+  .research-card {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.4rem 1.2rem;
+  }
+  .research-num { font-size: 1.6rem; text-align: left; }
+
+  /* Contact */
+  .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+  
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 2rem 1.2rem;
+  }
+}
 
 </style>
 </head>
@@ -330,8 +487,13 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">SR</a>
-  <ul class="nav-links">
+  <a href="#hero" class="nav-logo">SR_</a>
+  <button id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about" data-num="01.">About</a></li>
     <li><a href="#experience" data-num="02.">Experience</a></li>
     <li><a href="#projects" data-num="03.">Projects</a></li>
@@ -369,7 +531,27 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     </a>
   </div>
 
-  <!-- Floating avatar + stats -->
+  <!-- Mobile Avatar + Stats Grid -->
+  <div class="hero-mobile-stats">
+    <div class="hero-stat-card">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Publications</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="stat-num">98.2%</div>
+      <div class="stat-label">AI Accuracy</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="stat-num">10</div>
+      <div class="stat-label">GitHub Repos</div>
+    </div>
+    <div class="hero-stat-card">
+      <div class="stat-num">8.54</div>
+      <div class="stat-label">CGPA</div>
+    </div>
+  </div>
+
+  <!-- Desktop Floating avatar + stats -->
   <div class="hero-avatar-wrap">
     <div class="avatar-ring-outer">
       <img src="https://avatars.githubusercontent.com/u/221105763?v=4" alt="Sampurna Roy" class="avatar-img" />
@@ -1125,7 +1307,6 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
       <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
     </a>
   </div>
-  <div class="footer-right">&copy; 2026 Sampurna Roy. All rights reserved.</div>
 </footer>
 
 <script>
@@ -1162,6 +1343,26 @@ let rIdx=0,cIdx=0,del=false;
 const typedEl=document.getElementById('typed-out');
 function typeW(){const cur=roles[rIdx];if(!del){typedEl.textContent=cur.slice(0,++cIdx);if(cIdx===cur.length){del=true;setTimeout(typeW,1800);return;}setTimeout(typeW,70);}else{typedEl.textContent=cur.slice(0,--cIdx);if(cIdx===0){del=false;rIdx=(rIdx+1)%roles.length;}setTimeout(typeW,40);}}
 setTimeout(typeW,1200);
+
+
+// MOBILE NAV TOGGLE
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+
+  // Close menu when clicking on any link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+}
 
 // SCROLL REVEAL
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');e.target.querySelectorAll('.skill-bar-fill').forEach(b=>b.style.width=b.dataset.width+'%');}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
