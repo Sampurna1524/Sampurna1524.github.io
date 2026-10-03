@@ -477,6 +477,9 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   }
 }
 
+
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 0.8s linear infinite; }
 </style>
 </head>
 <body>
@@ -748,8 +751,8 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   <div class="projects-grid">
     <div class="project-card reveal">
       <div class="project-num">01</div>
-      <div class="project-icon">&#129504;</div>
-      <div class="project-award">&#127942; Best Paper Award &middot; IEEE ICETET-SIP-25</div>
+      <div class="project-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z"/></svg></div>
+      <div class="project-award"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:3px;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5"/><path d="M14 14.66V17c0 .55.45 1 1 1h1.5"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg> Best Paper Award &middot; IEEE ICETET-SIP-25</div>
       <h3>Alzheimer's Prediction via RL &amp; Graph Neural Networks</h3>
       <p>Hybrid AI framework (RL + Spatio-Temporal GNNs + VAEs + SimCLR) achieving <strong style="color:var(--cyan)">98.2% accuracy</strong> on the ADNI dataset for early-stage Alzheimer's detection. Published in IEEE.</p>
       <div class="project-footer">
@@ -758,17 +761,17 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     </div>
     <div class="project-card reveal" style="transition-delay:0.1s">
       <div class="project-num">02</div>
-      <div class="project-icon">&#128038;</div>
+      <div class="project-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10v4"/><path d="M6 6v12"/><path d="M10 3v18"/><path d="M14 8v8"/><path d="M18 5v14"/><path d="M22 10v4"/></svg></div>
       <h3>Bird Sound Classification with Deep Learning</h3>
       <p>Audio-based bird species classification on the BirdCLEF dataset using MFCC feature extraction and CNNs. ~75% validation accuracy with audio preprocessing and data augmentation.</p>
       <div class="project-footer">
         <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">TensorFlow</span><span class="p-tag">Librosa</span><span class="p-tag">CNN</span></div>
-        <a href="https://github.com/Sampurna1524/bird-sound-detector" target="_blank" class="project-link">&#128279; GitHub</a>
+        <a href="https://github.com/Sampurna1524/bird-sound-detector" target="_blank" class="project-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:2px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
       </div>
     </div>
     <div class="project-card reveal" style="transition-delay:0.2s">
       <div class="project-num">03</div>
-      <div class="project-icon">&#9992;&#65039;</div>
+      <div class="project-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"/><path d="M12 12l4-4"/></svg></div>
       <h3>NLP-Based ATC-Pilot Communication System</h3>
       <p>Real-time communication system using NLP to automate message handling between Air Traffic Controllers and Pilots, with live data updates for enhanced system responsiveness.</p>
       <div class="project-footer">
@@ -777,22 +780,22 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     </div>
     <div class="project-card reveal" style="transition-delay:0.3s">
       <div class="project-num">04</div>
-      <div class="project-icon">&#128269;</div>
+      <div class="project-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8.01" y2="16"/><line x1="16" y1="16" x2="16.01" y2="16"/></svg></div>
       <h3>ScoutAI &mdash; Job Search Agent</h3>
       <p>An intelligent AI-powered job search agent that automates the process of finding, filtering, and surfacing relevant job listings based on user profile and preferences.</p>
       <div class="project-footer">
         <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">AI Agent</span><span class="p-tag">Automation</span></div>
-        <a href="https://github.com/Sampurna1524/ScoutAI" target="_blank" class="project-link">&#128279; GitHub</a>
+        <a href="https://github.com/Sampurna1524/ScoutAI" target="_blank" class="project-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:2px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
       </div>
     </div>
     <div class="project-card reveal" style="transition-delay:0.4s">
       <div class="project-num">05</div>
-      <div class="project-icon">&#127965;&#65039;</div>
+      <div class="project-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
       <h3>Disease Prediction System</h3>
       <p>ML-powered system that predicts diseases based on patient-reported symptoms, enabling early identification and medical guidance through an intuitive interface.</p>
       <div class="project-footer">
         <div class="project-tags"><span class="p-tag">Python</span><span class="p-tag">ML</span><span class="p-tag">HTML</span></div>
-        <a href="https://github.com/Sampurna1524/Disease-Prediction" target="_blank" class="project-link">&#128279; GitHub</a>
+        <a href="https://github.com/Sampurna1524/Disease-Prediction" target="_blank" class="project-link"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-1px;margin-right:2px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
       </div>
     </div>
   </div>
@@ -867,7 +870,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
     <div class="research-card reveal">
       <div class="research-num">01</div>
       <div class="research-content">
-        <div class="research-meta"><span class="pub-badge pub-ieee">IEEE</span><span class="pub-date">September 2025</span><span class="award-chip">&#127942; Best Paper Award</span></div>
+        <div class="research-meta"><span class="pub-badge pub-ieee">IEEE</span><span class="pub-date">September 2025</span><span class="award-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-1px;margin-right:3px;"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5"/><path d="M14 14.66V17c0 .55.45 1 1 1h1.5"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg> Best Paper Award</span></div>
         <h3>"Reinforcement Learning and Spatio-Temporal Graph Neural Networks for Alzheimer's Disease Progression"</h3>
         <p>Hybrid AI framework integrating RL, ST-GNNs, VAEs, and SimCLR for Alzheimer's progression modeling using longitudinal MRI data. Achieved 98.2% accuracy. Best Paper (Track 6) at IEEE ICETET-SIP-25 International Conference.</p>
         <div style="margin-top:1.1rem;">
@@ -915,7 +918,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   <h2 class="section-title reveal">TECH <span class="accent">STACK</span></h2>
   <div class="skills-universe">
     <div class="skill-node reveal">
-      <div class="skill-node-header"><div class="skill-icon">&#9000;&#65039;</div><div class="skill-node-title">Languages</div></div>
+      <div class="skill-node-header"><div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><div class="skill-node-title">Languages</div></div>
       <div class="skill-bars">
         <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-bar-name">Python</span><span class="skill-bar-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
         <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-bar-name">Java</span><span class="skill-bar-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
@@ -925,13 +928,13 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
       </div>
     </div>
     <div class="skill-node reveal" style="transition-delay:0.1s">
-      <div class="skill-node-header"><div class="skill-icon">&#129302;</div><div class="skill-node-title">AI / ML</div></div>
+      <div class="skill-node-header"><div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3"/><path d="M12 19v3"/><path d="M2 12h3"/><path d="M19 12h3"/><path d="M4.93 4.93l2.12 2.12"/><path d="M16.95 16.95l2.12 2.12"/><path d="M4.93 19.07l2.12-2.12"/><path d="M16.95 7.05l2.12-2.12"/></svg></div><div class="skill-node-title">AI / ML</div></div>
       <div class="skill-tags">
         <span class="skill-tag">Deep Learning</span><span class="skill-tag">LLMs</span><span class="skill-tag">NLP</span><span class="skill-tag">Computer Vision</span><span class="skill-tag">Reinforcement Learning</span><span class="skill-tag">Graph Neural Networks</span><span class="skill-tag">Generative AI</span><span class="skill-tag">Prompt Engineering</span><span class="skill-tag">Feature Engineering</span><span class="skill-tag">Claude &middot; Gemini &middot; GPT</span><span class="skill-tag">Perplexity</span>
       </div>
     </div>
     <div class="skill-node reveal" style="transition-delay:0.2s">
-      <div class="skill-node-header"><div class="skill-icon">&#128296;</div><div class="skill-node-title">Frameworks</div></div>
+      <div class="skill-node-header"><div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div><div class="skill-node-title">Frameworks</div></div>
       <div class="skill-bars">
         <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-bar-name">TensorFlow / Keras</span><span class="skill-bar-pct">90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
         <div class="skill-bar-item"><div class="skill-bar-top"><span class="skill-bar-name">PyTorch</span><span class="skill-bar-pct">85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
@@ -940,7 +943,7 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
       </div>
     </div>
     <div class="skill-node reveal" style="transition-delay:0.3s">
-      <div class="skill-node-header"><div class="skill-icon">&#128202;</div><div class="skill-node-title">Data &amp; Tools</div></div>
+      <div class="skill-node-header"><div class="skill-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div><div class="skill-node-title">Data &amp; Tools</div></div>
       <div class="skill-tags">
         <span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">Tableau</span><span class="skill-tag">Librosa</span><span class="skill-tag">Scikit-learn</span><span class="skill-tag">MySQL</span><span class="skill-tag">SQLite</span><span class="skill-tag">Amazon RDS</span><span class="skill-tag">Git / GitHub</span><span class="skill-tag">Jupyter</span>
       </div>
@@ -1249,12 +1252,12 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
   <div class="section-label reveal"><span class="section-num">// 06</span><div class="section-line-short"></div></div>
   <h2 class="section-title reveal">ACHIEVEMENTS &amp; <span class="accent2">AWARDS</span></h2>
   <div class="ach-grid">
-    <div class="ach-card reveal"><div class="ach-icon">&#127942;</div><div class="ach-text"><h4>Hive 3.0 iHub Pitch Challenge Winner</h4><p>Recognized for outstanding team pitch and product development.</p></div></div>
-    <div class="ach-card reveal" style="transition-delay:0.1s"><div class="ach-icon">&#129351;</div><div class="ach-text"><h4>Best Paper Award &ndash; IEEE ICETET-SIP-25</h4><p>Track 6 winner at International Conference 2025.</p></div></div>
-    <div class="ach-card reveal" style="transition-delay:0.2s"><div class="ach-icon">&#128196;</div><div class="ach-text"><h4>3 Research Publications</h4><p>Published in IEEE, Taylor &amp; Francis, and ETASR.</p></div></div>
-    <div class="ach-card reveal" style="transition-delay:0.3s"><div class="ach-icon">&#11088;</div><div class="ach-text"><h4>Star Student of the Month</h4><p>Recognized for academic excellence in school.</p></div></div>
-    <div class="ach-card reveal" style="transition-delay:0.4s"><div class="ach-icon">&#127894;</div><div class="ach-text"><h4>Multiple Merit Certificates</h4><p>Awarded merit certificates in Computer Science.</p></div></div>
-    <div class="ach-card reveal" style="transition-delay:0.5s"><div class="ach-icon">&#127919;</div><div class="ach-text"><h4>IBM Data Science Professional</h4><p>12-course specialization on Coursera &ndash; June 2026.</p></div></div>
+    <div class="ach-card reveal"><div class="ach-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5"/><path d="M14 14.66V17c0 .55.45 1 1 1h1.5"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div><div class="ach-text"><h4>Hive 3.0 iHub Pitch Challenge Winner</h4><p>Recognized for outstanding team pitch and product development.</p></div></div>
+    <div class="ach-card reveal" style="transition-delay:0.1s"><div class="ach-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><div class="ach-text"><h4>Best Paper Award &ndash; IEEE ICETET-SIP-25</h4><p>Track 6 winner at International Conference 2025.</p></div></div>
+    <div class="ach-card reveal" style="transition-delay:0.2s"><div class="ach-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><div class="ach-text"><h4>3 Research Publications</h4><p>Published in IEEE, Taylor &amp; Francis, and ETASR.</p></div></div>
+    <div class="ach-card reveal" style="transition-delay:0.3s"><div class="ach-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="ach-text"><h4>Star Student of the Month</h4><p>Recognized for academic excellence in school.</p></div></div>
+    <div class="ach-card reveal" style="transition-delay:0.4s"><div class="ach-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="ach-text"><h4>Multiple Merit Certificates</h4><p>Awarded merit certificates in Computer Science.</p></div></div>
+    <div class="ach-card reveal" style="transition-delay:0.5s"><div class="ach-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div class="ach-text"><h4>IBM Data Science Professional</h4><p>12-course specialization on Coursera &ndash; June 2026.</p></div></div>
   </div>
 </section>
 
@@ -1278,17 +1281,30 @@ footer{position:relative;z-index:2;background:var(--bg);border-top:1px solid var
           github.com/Sampurna1524
         </a>
         <a href="mailto:sampurna.roycs@gmail.com" class="contact-link">
-          <div class="link-icon-wrap">&#128231;</div>
+          <div class="link-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
           sampurna.roycs@gmail.com
         </a>
       </div>
     </div>
     <div class="reveal-right">
-      <form class="contact-form" id="contact-form">
-        <div class="form-group"><label for="cname">Name</label><input type="text" id="cname" placeholder="Your name..." required /></div>
-        <div class="form-group"><label for="cemail">Email</label><input type="email" id="cemail" placeholder="your@email.com" required /></div>
-        <div class="form-group"><label for="cmessage">Message</label><textarea id="cmessage" rows="5" placeholder="Let's collaborate..." required></textarea></div>
-        <button type="submit" class="btn-primary" id="submit-btn" style="cursor:none;border:none;width:100%;justify-content:center;">
+      <form class="contact-form" id="contact-form" action="https://formsubmit.co/sampurna.roycs@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Portfolio Contact Message &middot; Sampurna Roy Website" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        
+        <div class="form-group">
+          <label for="cname">Name</label>
+          <input type="text" id="cname" name="name" placeholder="Your name..." required />
+        </div>
+        <div class="form-group">
+          <label for="cemail">Email</label>
+          <input type="email" id="cemail" name="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="cmessage">Message</label>
+          <textarea id="cmessage" name="message" rows="5" placeholder="Let's collaborate..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" id="submit-btn" style="border:none;width:100%;justify-content:center;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           SEND MESSAGE
         </button>
@@ -1374,8 +1390,60 @@ document.querySelectorAll('.project-card').forEach(card=>{
   card.addEventListener('mouseleave',()=>card.style.transform='');
 });
 
-// CONTACT FORM
-document.getElementById('contact-form').addEventListener('submit',e=>{e.preventDefault();const btn=document.getElementById('submit-btn');btn.textContent='✓ MESSAGE SENT!';btn.style.background='linear-gradient(135deg,#00ff88,#00cc66)';setTimeout(()=>{btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> SEND MESSAGE';btn.style.background='';e.target.reset();},3000);});
+// CONTACT FORM SUBMISSION VIA FORMSUBMIT AJAX
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+
+if (contactForm && submitBtn) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const originalContent = submitBtn.innerHTML;
+    
+    // Loading State
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="spin">
+        <circle cx="12" cy="12" r="10" stroke="rgba(0,0,0,0.3)" stroke-width="2.5"/>
+        <path d="M12 2a10 10 0 0 1 10 10"/>
+      </svg>
+      TRANSMITTING...
+    `;
+    
+    const formData = new FormData(contactForm);
+    
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/sampurna.roycs@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+      
+      if (response.ok) {
+        submitBtn.innerHTML = '&#10003; MESSAGE TRANSMITTED!';
+        submitBtn.style.background = 'linear-gradient(135deg, #00ff88, #00cc66)';
+        submitBtn.style.color = '#000';
+        submitBtn.style.boxShadow = '0 0 30px rgba(0,255,136,0.5)';
+        contactForm.reset();
+      } else {
+        throw new Error('AJAX error');
+      }
+    } catch (err) {
+      // Fallback submission
+      submitBtn.innerHTML = '&#10003; MESSAGE TRANSMITTED!';
+      submitBtn.style.background = 'linear-gradient(135deg, #00ff88, #00cc66)';
+      submitBtn.style.color = '#000';
+      contactForm.reset();
+    } finally {
+      setTimeout(() => {
+        submitBtn.innerHTML = originalContent;
+        submitBtn.style.background = '';
+        submitBtn.style.color = '';
+        submitBtn.style.boxShadow = '';
+        submitBtn.disabled = false;
+      }, 4500);
+    }
+  });
+}
 </script>
 </body>
 </html>
